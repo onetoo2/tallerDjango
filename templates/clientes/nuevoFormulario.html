@@ -1,0 +1,22 @@
+{% extends 'base/index.html' %}
+{% load staticfiles %}
+
+{% block extracss %} 
+<link rel="stylesheet" type="text/css" href="{% static 'css/estilo_especial.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+	<div class="row justify-content-md-center">
+		<div class="col-6">
+			<h1 class="text-center mb-4">Registro de nuevo cliente</h1>
+			<form method="post">
+				{% csrf_token %}
+				{{form.as_p}}
+				<button type="submit" class="btn btn-success">Registrar</button>
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+<div class="container">
+	<h1>Clientes</h1>
+	<table class="table">
+		<thead class="thead-light">
+			<tr>
+				<th scope="col">No.</th>
+				<th scope="col">Nombre</th>
+				<th scope="col">Apellido</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for cliente in clientes %}
+			<tr>
+				<th scope="row">{{cliente.id}}</th>
+				<td>{{cliente.nombre}}</td>
+				<td>{{cliente.apellidos}}</td>
+			</tr>
+			{% empty %}
+			<th>No hay clientes</th>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+<script type="text/javascript" src="js/bootstrap.js"></script>

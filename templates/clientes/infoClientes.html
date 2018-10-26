@@ -1,0 +1,17 @@
+{% extends 'base/index.html' %}
+{% load staticfiles %}
+
+{% block extracss %} 
+<link rel="stylesheet" type="text/css" href="{% static 'css/estilo_especial.css' %}">
+{% endblock %}
+
+{% block content %}
+
+{% include 'base/info2.html' %}
+<!--
+{% for cliente in object_list %}
+	<p>{{cliente.nombre}} {{cliente.apellidos}}</p>
+{% empty %}
+	<p>No hay clientes</p>
+{% endfor %}-->
+{% endblock %}

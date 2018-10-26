@@ -1,0 +1,19 @@
+{% extends 'base/index.html' %}
+{% load staticfiles %}
+
+{% block extracss %} 
+<link rel="stylesheet" type="text/css" href="{% static 'css/estilo_especial.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<a class="btn btn-primary mb-3 ml-4" href="{% url 'clientes:nuevoRegistro' %}">Nuevo registro</a>
+
+{% include 'base/info.html' %}
+<!--{% for cliente in clientes %}
+	<p>{{cliente.nombre}} {{cliente.apellidos}}</p>
+{% empty %}
+	<p>No hay clientes</p>
+{% endfor %}-->
+
+{% endblock %}
