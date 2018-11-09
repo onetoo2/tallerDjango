@@ -25,7 +25,7 @@ SECRET_KEY = '(xim$(%33li_mx=vm0sl8-&t9t8fr88-k%=g%huyu$*gyvxz+^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['basic01.pythonanywhere.com']
 
 
 # Application definition
@@ -77,10 +77,10 @@ WSGI_APPLICATION = 'proyecto1.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'nuevabd',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
+        'NAME': 'basic01$nuevabd',
+        'USER': 'basic01',
+        'PASSWORD': 'BDTaller',
+        'HOST': 'basic01.mysql.pythonanywhere-services.com',
         'PORT': '3306'
     }
 }
